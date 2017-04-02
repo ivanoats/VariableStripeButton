@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variable Payment Test</title>
+  </head>
+  <body>
+    <h1>Variable Payment Amount test</h1>
+    <p>This form takes a payment amount that can be entered by the user</p>
+    <form  
+      method="POST"
+      action="https://wt-ivanoats-gmail_com-0.run.webtask.io/variable-pay-button">
+      <input type="text" name="amount">
+      <script
+        src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="pk_test_53PYoEGVrPHELME8wVkJvXlN"
+        data-name="Acme Widget Co"
+        data-description="variable payment"
+        data-amount="214"
+        data-locale="auto"
+        data-panel-label="Acme Widget Co Payment"
+        data-label="Buy Acme Widgets">
+  </script>
+      </script>
+    </form>
+  </body>
+</html>
