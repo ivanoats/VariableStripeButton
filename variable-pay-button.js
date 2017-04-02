@@ -2,6 +2,10 @@ var stripe = require('stripe');
 
 module.exports = function (ctx, req, res) {
     var companyName = 'Acme Widgets'
+    console.log("----------------------CONTEXT---------")
+    console.log(ctx)
+    console.log("----------------------REQUEST---------")
+    console.log(req)
     stripe(ctx.secrets.stripeSecretKey).charges.create({
         amount: req.amount,
         currency: 'usd',
