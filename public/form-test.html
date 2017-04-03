@@ -11,13 +11,13 @@
     <div class="pure-g">
       <div class="pure-u-1-5"></div>
       <div class="pure-u-3-5">
-        <h1>Variable Payment Amount</h1>
+        <h1>Form Logger Test - Variable Payment Amount</h1>
         <p>This form takes a payment amount that can be entered by the user</p>
         <form
           style="padding-top: 2em"
           class="pure-form pure-form-aligned"
           method="POST"
-          action="https://wt-ivanoats-gmail_com-0.run.webtask.io/variable-pay-button">
+          action="https://wt-ivanoats-gmail_com-0.run.webtask.io/form-logger">
           <fieldset>
             <div class="pure-control-group">
               <label for="amount">How many widgets?</label>
@@ -25,17 +25,7 @@
             </div>
           </fieldset>
           <div class="pure-controls">
-          <script
-            src="https://checkout.stripe.com/checkout.js"
-            class="stripe-button"
-            data-key="pk_test_53PYoEGVrPHELME8wVkJvXlN"
-            data-name="Acme Widget Co"
-            data-description="variable payment"
-            data-amount="214"
-            data-locale="auto"
-            data-panel-label="Acme Widget Co Payment"
-            data-label="Buy Acme Widgets">
-          </script>
+            <input type="submit">
           </div>
         </form>
       </div>
