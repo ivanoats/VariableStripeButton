@@ -1,0 +1,34 @@
+{
+  "name": "variable-stripe-button",
+  "version": "0.0.1",
+  "description": " A payment button for Stripe that accepts a variable amount and has serverless processing",
+  "main": "public/index.html\t",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanoats/VariableStripeButton.git"
+  },
+  "keywords": [
+    "stripe",
+    "serverless",
+    "payments",
+    "ecommerce"
+  ],
+  "author": "Ivan Storck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanoats/VariableStripeButton/issues"
+  },
+  "homepage": "https://github.com/ivanoats/VariableStripeButton#readme",
+  "devDependencies": {
+    "husky": "^0.13.3"
+  },
+  "dependencies": {
+    "purecss": "^0.6.2"
+  },
+  "scripts": {
+    "postcommit": "aero deploy"
+  }
+}
