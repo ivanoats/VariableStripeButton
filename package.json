@@ -4,7 +4,7 @@
   "description": " A payment button for Stripe that accepts a variable amount and has serverless processing",
   "main": "public/index.html\t",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pre-push": "aero deploy"
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,15 @@
   },
   "homepage": "https://github.com/ivanoats/VariableStripeButton#readme",
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
     "husky": "^0.13.3"
   },
   "dependencies": {
     "purecss": "^0.6.2"
-  },
-  "scripts": {
-    "postcommit": "aero deploy"
   }
 }
