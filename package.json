@@ -4,7 +4,7 @@
   "description": " A payment button for Stripe that accepts a variable amount and has serverless processing",
   "main": "public/index.html\t",
   "scripts": {
-    "pre-push": "aero deploy"
+    "prepush": "aero deploy"
   },
   "repository": {
     "type": "git",
