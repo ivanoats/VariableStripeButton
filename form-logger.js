@@ -1,7 +1,9 @@
 module.exports = function (ctx, req, res) {
   console.log('-----------------------DATA--------')
-  console.log(ctx.query.amount)
-  const amount = ctx.query.amount
+  console.log(ctx.data)
+  console.log('-----------------------BODY--------')
+  console.log(ctx.body)
+  const amount = ctx.data.amount
   res.writeHead(
     301,
     {
