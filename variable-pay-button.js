@@ -8,9 +8,17 @@ module.exports = function (ctx, req, res) {
     source: ctx.body.stripeToken,
     description: `${companyName} purchase`
   }, function (error, charge) {
-    var status = error ? 400 : 200
-    var message = error ? error.message : `Thanks for purchasing from ${companyName}!`
-    res.writeHead(status, { 'Content-Type': 'text/html' })
-    return res.end('<h1>' + message + '</h1>')
+    if (error) {
+      res.writeHead(500, { 'Content-Type': 'text/html'} )
+      return res.end(`<h1>${error.message}</h1>`)
+    } else {
+      res.writeHead(
+        301,
+        {
+          Location:
+          `https://variable-stripe-pay.aerobatic.io/thankyou.html?amount=${req.amount}`
+        }
+      )
+    }
   })
 }
