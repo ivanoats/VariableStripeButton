@@ -12,13 +12,17 @@
       <div class="pure-u-1-5"></div>
       <div class="pure-u-3-5">
         <h1>Thanks for your purchase</h1>
-        <p>Thank you for your purchase of $<span id="amount"></span></p>
+        <p>Thank you for your purchase of <span id="amount"></span></p>
       </div>
       <div class="pure-u-1-5"></div>
     </div>
     <script>
-      // fill in purchase amount from querystring
-    </script>
+      const amount = new URLSearchParams(window.location.search).get('amount') / 100
 
+      document.getElementById('amount').innerText = amount.toLocaleString(
+        'en-US',
+        { style: 'currency', currency: 'USD' }
+      )
+    </script>
   </body>
 </html>
